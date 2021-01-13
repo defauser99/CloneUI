@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_mail"
+        android:icon="@drawable/ic_baseline_mail_24"
+        android:title="@string/title_mail" />
+
+    <item
+        android:id="@+id/navigation_meet"
+        android:icon="@drawable/ic_outline_videocam_24"
+        android:title="@string/title_meet" />
+</menu>

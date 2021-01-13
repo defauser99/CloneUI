@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_all"
+            android:icon="@drawable/ic_baseline_all_inbox_24"
+            android:title="@string/menu_all" />
+    </group>
+
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_primary"
+            android:checked="true"
+            android:icon="@drawable/ic_baseline_inbox_24"
+            android:title="@string/menu_primary" />
+        <item
+            android:id="@+id/nav_social"
+            android:icon="@drawable/ic_outline_people_alt_24"
+            android:title="@string/menu_social" />
+
+        <item
+            android:id="@+id/nav_promotions"
+            android:icon="@drawable/ic_outline_local_offer_24"
+            android:title="@string/menu_promotions" />
+    </group>
+
+    <group
+        android:id="@+id/group3"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/subtitle1"
+            android:title="@string/subtitle_all_labels">
+            <menu>
+                <item
+                    android:id="@+id/nav_starred"
+                    android:icon="@drawable/ic_baseline_star_outline_24"
+                    android:title="@string/menu_starred" />
+                <item
+                    android:id="@+id/nav_snoozed"
+                    android:icon="@drawable/ic_baseline_access_time_24"
+                    android:title="@string/menu_snoozed" />
+
+                <item
+                    android:id="@+id/nav_important"
+                    android:icon="@drawable/ic_twotone_label_important_24"
+                    android:title="@string/menu_important" />
+
+                <item
+                    android:id="@+id/nav_sent"
+                    android:icon="@drawable/ic_outline_send_24"
+                    android:title="@string/menu_sent" />
+
+                <item
+                    android:id="@+id/nav_scheduled"
+                    android:icon="@drawable/ic_outline_schedule_send_24"
+                    android:title="@string/menu_scheduled" />
+
+                <item
+                    android:id="@+id/nav_outbox"
+                    android:icon="@drawable/vd_vector__1_"
+                    android:title="@string/menu_outbox" />
+
+                <item
+                    android:id="@+id/nav_draft"
+                    android:icon="@drawable/ic_outline_insert_drive_file_24"
+                    android:title="@string/menu_drafts" />
+
+                <item
+                    android:id="@+id/nav_spam"
+                    android:icon="@drawable/ic_outline_report_24"
+                    android:title="@string/menu_spam" />
+
+                <item
+                    android:id="@+id/nav_trash"
+                    android:icon="@drawable/vd_vector"
+                    android:title="@string/menu_trash" />
+            </menu>
+        </item>
+    </group>
+
+    <group
+        android:id="@+id/group4"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/subtitle2"
+            android:title="@string/subtitle_google_apps">
+            <menu>
+                <item
+                    android:id="@+id/nav_calendar"
+                    android:icon="@drawable/ic_baseline_calendar_today_24"
+                    android:title="@string/menu_calendar" />
+                <item
+                    android:id="@+id/nav_contacts"
+                    android:icon="@drawable/ic_outline_account_circle_24"
+                    android:title="@string/menu_contacts" />
+            </menu>
+        </item>
+    </group>
+
+    <group
+        android:id="@+id/group5"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_outline_settings_24"
+            android:title="@string/menu_settings" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_baseline_help_outline_24"
+            android:title="@string/menu_help" />
+    </group>
+
+</menu>

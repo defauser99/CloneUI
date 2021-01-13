@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_search_bar"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        app:boxBackgroundColor="@color/white"
+        app:endIconCheckable="true"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_search_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/search_email"
+            android:inputType="textEmailSubject"
+            android:paddingStart="60dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="0dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/burger_button"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/ic_baseline_menu_24"
+        android:importantForAccessibility="no"
+        app:backgroundTint="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/email_search_bar"
+        app:layout_constraintStart_toStartOf="@+id/email_search_bar"
+        app:layout_constraintTop_toTopOf="@+id/email_search_bar" />
+
+    <ImageView
+        android:id="@+id/profile_picture"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:importantForAccessibility="no"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/email_search_bar"
+        app:layout_constraintEnd_toEndOf="@id/email_search_bar"
+        app:layout_constraintTop_toTopOf="@id/email_search_bar"
+        app:srcCompat="@drawable/ic_baseline_account_circle_24" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:importantForAccessibility="no"
+        android:text="@string/compose_text"
+        android:textAllCaps="false"
+        android:textColor="@color/red_500"
+        android:textSize="16sp"
+        app:icon="@drawable/ic_outline_create_24"
+        app:iconTint="@color/red_500"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav_view"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_view"
+        app:layout_constraintTop_toBottomOf="@+id/email_search_bar">
+
+        <TextView
+            android:id="@+id/mail_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/primary_mail_category" />
+
+        <TextView
+            android:id="@+id/profile_photo1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/mail_category"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/background_blue"
+            android:gravity="center"
+            android:text="@string/profile_nopic_init_d"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/important_tag1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mail_category"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="18dp"
+            android:layout_toEndOf="@id/profile_photo1"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/ic_baseline_label_important_24" />
+
+        <TextView
+            android:id="@+id/profile_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mail_category"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@id/profile_photo1"
+            android:text="@string/mail_sender_username"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mail_time1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mail_category"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/important_tag1"
+            android:text="@string/sample_time"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/mail_subject1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_name1"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/profile_photo1"
+            android:text="@string/mail_subject"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mail_body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mail_subject1"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/profile_photo1"
+            android:text="@string/mail_body"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/favourite_tag1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mail_time1"
+            android:layout_marginStart="265dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@id/important_tag1"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/ic_baseline_star_outline_24" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
